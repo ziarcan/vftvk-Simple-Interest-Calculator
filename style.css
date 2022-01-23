@@ -1,4 +1,48 @@
-body {background-color:tan;}
-h1{color:green;}
+body {
+    background-color: black;
+    font-family: arial, serif;
+    color: white;
+    display: flex;
+    justify-content: center;
+}
+
+h1 {
+    color: grey;
+    font-family: verdana, serif;
+}
+
+.maindiv {
+    background-color: white;
+    color: black;
+    width: 500px;
+    padding: 20px;
+    border-radius: 25px;
+}
+
+.maindiv > div {
+    margin-left: 80px;
+    margin-bottom: 10px;
+}
+
+fieldset {
+    border: 0;
+    margin-left: 80px;
+    padding: 0;
+}
+
+fieldset > div > label {
+    width: 115px;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+fieldset > div > input, fieldset > div > div, fieldset > div > select {
+    margin-bottom: 10px;
+}
+
+button {
+    margin-left: 80px;
+    margin-bottom: 10px;
+}
 
 

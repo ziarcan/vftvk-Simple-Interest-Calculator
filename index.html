@@ -1,16 +1,50 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
     <head>
-    <script src="script.js"></script>
-    <link rel="stylesheet" href="style.css">
+        <title>Simple Interest Calculator</title>
+        <script src="script.js"></script>
+        <link href="style.css" rel="stylesheet">
     </head>
     <body>
-        <h1>Simple Interest Calculator</h1>
-
-        Amount <input type="number"  id="principal">  <br/>
-        Rate <input type="number"  id="rate">  <br/>
-        No. of Years <input type="number"  id="years">  <br/>
-        Interest : <span id="result"></span><br>
-
-        <button onclick="compute()">Compute</button>
+        <div class="maindiv">
+            <h1>Simple Interest Calculator</h1>
+            <form action="#">
+                <fieldset>
+                    <div>
+                        <label for="principal">Amount</label>
+                        <input autofocus id="principal" type="number">
+                    </div>
+                    <div>
+                        <label for="rate">Interest Rate</label>
+                        <input id="rate" max="20" min="1" onchange="updateRate()" step="0.25"
+                               type="range"
+                               value="10.25">
+                        <span id="rate_val">10.25%</span>
+                    </div>
+                    <div>
+                        <label for="years">No. of Years</label>
+                        <select id="years">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                        </select>
+                    </div>
+                </fieldset>
+                <button onclick="compute()">Compute Interest</button>
+            </form>
+            <div>
+                <span id="result"></span>
+            </div>
+            <footer>
+                &#169; This Calculator belongs to Branislav Balaz
+            </footer>
+        </div>
     </body>
 </html>
